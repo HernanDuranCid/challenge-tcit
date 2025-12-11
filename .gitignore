@@ -1,0 +1,95 @@
+# ============================
+# FRONTEND (React + Vite)
+# ============================
+
+# Dependencias
+node_modules/
+
+# Builds y distribuciones
+dist/
+build/
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache
+*.cache
+*.temp
+*.tmp
+
+# Archivos del sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Archivos de prueba o artefactos temporales
+coverage/
+*.spec.js
+*.test.js
+*.map
+
+
+# ============================
+#e BACKEND (Flask + Python)
+# ============================
+
+# Entornos virtuales y compilados
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+
+# Bases de datos y logs
+backend/*.db
+backend/*.sqlite3
+backend/app.log
+backend/*.log
+backend/*.pid
+
+# Archivos de entorno
+backend/.env
+
+# Archivos de instancia
+backend/instance/
+
+# ============================
+# GENERALES / SISTEMA
+# ============================
+
+# Archivos de sistema y temporales
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.cache
+*.tar
+*.gz
+*.zip
+
+# Configuración del editor
+.vscode/
+.idea/
+
+# Bloqueos y backups
+*.lock
+*.swp
+*.swo
+*.orig
+
+# Archivos de workspace
+*.code-workspace
