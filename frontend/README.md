@@ -20,7 +20,6 @@ La aplicación permite **crear**, **listar**, **filtrar** y **eliminar registros
 
 ```bash
 frontend/
-├── build/
 ├── public/
 ├── src/
 │   ├── api/
@@ -38,6 +37,9 @@ frontend/
 │   ├── App.css
 │   ├── index.css
 │   └── tailwind.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── pnpm-lock.yaml
 ├── package.json
 └── README.md
 ```
