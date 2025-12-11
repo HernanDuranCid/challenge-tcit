@@ -38,7 +38,7 @@ Crea un archivo `.env` con el siguiente contenido:
 
 ```env
 DATABASE_URL=postgresql://usuario:contraseña@localhost:PORT/"nombre_de_la_tabla"
-FLASK_ENV=prodution
+FLASK_ENV=production
 ```
 
 ### 3️⃣ Inicializar la base de datos
