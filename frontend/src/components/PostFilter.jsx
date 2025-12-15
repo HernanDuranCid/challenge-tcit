@@ -1,8 +1,11 @@
 import { useState } from "react";
 
+// Componente encargado de capturar y propagar el texto de filtrado
 export default function PostFilter({ onFilter }) {
+  // Estado local que mantiene el valor actual del filtro
   const [query, setQuery] = useState("");
 
+  // Maneja los cambios en el input y notifica al componente padre
   const handleChange = (e) => {
     setQuery(e.target.value);
     onFilter(e.target.value);
@@ -10,6 +13,7 @@ export default function PostFilter({ onFilter }) {
 
   return (
     <div className="w-full">
+      {/* Campo de entrada para filtrar posts por nombre */}
       <input
         type="text"
         placeholder="Filtrar por nombre..."

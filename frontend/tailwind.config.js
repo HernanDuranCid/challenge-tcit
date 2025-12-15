@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  darkMode: "class", // 👈 control del tema oscuro por clase
+  darkMode: "class", // control del tema oscuro por clase
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -36,9 +36,9 @@ export default {
     },
   },
   plugins: [
-    require("tailwind-scrollbar")({ nocompatible: true }), // ✅ activa las variantes modernas
+    require("tailwind-scrollbar")({ nocompatible: true }),
   ],
   variants: {
-    scrollbar: ["rounded"], // ✅ permite esquinas redondeadas si las usas
+    scrollbar: ["rounded"],
   },
 };

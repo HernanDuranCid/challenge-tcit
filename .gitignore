@@ -1,5 +1,5 @@
 # ============================
-# FRONTEND (React + Vite)
+# FRONTEND (React)
 # ============================
 
 # Dependencias
@@ -43,7 +43,7 @@ coverage/
 
 
 # ============================
-#e BACKEND (Flask + Python)
+# BACKEND (Flask + Python)
 # ============================
 
 # Entornos virtuales y compilados

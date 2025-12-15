@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { apiClient as api } from "../api/apiClient";
 
+// Acción asíncrona para obtener la lista de posts
 export const fetchPosts = createAsyncThunk(
   "posts/fetchPosts",
   async (_, { rejectWithValue }) => {
@@ -18,6 +19,7 @@ export const fetchPosts = createAsyncThunk(
   }
 );
 
+// Acción asíncrona para crear un nuevo post
 export const addPost = createAsyncThunk(
   "posts/addPost",
   async (post, { rejectWithValue }) => {
@@ -35,6 +37,7 @@ export const addPost = createAsyncThunk(
   }
 );
 
+// Acción asíncrona para eliminar un post existente
 export const deletePost = createAsyncThunk(
   "posts/deletePost",
   async (id, { rejectWithValue }) => {
@@ -52,6 +55,7 @@ export const deletePost = createAsyncThunk(
   }
 );
 
+// Slice que gestiona el estado global de los posts
 const postsSlice = createSlice({
   name: "posts",
   initialState: {
@@ -60,12 +64,14 @@ const postsSlice = createSlice({
     error: null,
   },
   reducers: {
+    // Limpia el mensaje de error del estado
     clearError(state) {
       state.error = null;
     },
   },
   extraReducers: (builder) => {
     builder
+      // Estados asociados a la carga inicial de posts
       .addCase(fetchPosts.pending, (state) => {
         state.status = "loading";
         state.error = null;
@@ -79,6 +85,7 @@ const postsSlice = createSlice({
         state.error = action.payload || "Error al cargar los posts.";
       })
 
+      // Estados asociados a la creación de un post
       .addCase(addPost.pending, (state) => {
         state.status = "loading";
       })
@@ -91,6 +98,7 @@ const postsSlice = createSlice({
         state.error = action.payload || "Error al crear el post.";
       })
 
+      // Estados asociados a la eliminación de un post
       .addCase(deletePost.pending, (state) => {
         state.status = "loading";
       })
@@ -105,5 +113,8 @@ const postsSlice = createSlice({
   },
 });
 
+// Exporta acciones síncronas del slice
 export const { clearError } = postsSlice.actions;
+
+// Exporta el reducer para el store
 export default postsSlice.reducer;
