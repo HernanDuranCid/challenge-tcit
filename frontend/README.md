@@ -137,15 +137,15 @@ Esto asegura que el frontend solo se comunique con el backend configurado, inclu
 Se aplican validaciones estrictas antes de enviar datos al backend:
 
 * `name` y `description` son campos **obligatorios**
-* Límite de caracteres: `name` (máx. 50) y `description` (máx. 100)
+* Límite de caracteres: `name` (máx. 10) y `description` (máx. 50)
 * Se eliminan espacios extra con `trim()`
 * Errores mostrados al usuario con feedback visual
 
 ```js
 if (!name.trim()) return setError("El nombre es obligatorio.");
 if (!description.trim()) return setError("La descripción es obligatoria.");
-if (name.length > 50) return setError("El nombre no puede superar los 50 caracteres.");
-if (description.length > 100) return setError("La descripción no puede superar los 100 caracteres.");
+if (name.length > 10) return setError("El nombre no puede superar los 10 caracteres.");
+if (description.length > 50) return setError("La descripción no puede superar los 50 caracteres.");
 ```
 
 ### 3. Sanitización básica de entradas
