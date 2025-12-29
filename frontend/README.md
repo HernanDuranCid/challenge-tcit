@@ -137,7 +137,7 @@ Esto asegura que el frontend solo se comunique con el backend configurado, inclu
 Se aplican validaciones estrictas antes de enviar datos al backend:
 
 * `name` y `description` son campos **obligatorios**
-* Límite de caracteres: `name` (máx. 10) y `description` (máx. 50)
+* Límite de caracteres: `name` (máx. 50) y `description` (máx. 100)
 * Se eliminan espacios extra con `trim()`
 * Errores mostrados al usuario con feedback visual
 
