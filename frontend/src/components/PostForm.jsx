@@ -39,13 +39,13 @@ export default function PostForm() {
       setSubmitting(false);
       return;
     }
-    if (name.length > 10) {
-      setError("El nombre no puede superar los 10 caracteres.");
+    if (name.length > 50) {
+      setError("El nombre no puede superar los 50 caracteres.");
       setSubmitting(false);
       return;
     }
-    if (description.length > 50) {
-      setError("La descripción no puede superar los 50 caracteres.");
+    if (description.length > 100) {
+      setError("La descripción no puede superar los 100 caracteres.");
       setSubmitting(false);
       return;
     }
@@ -79,7 +79,7 @@ export default function PostForm() {
         placeholder="Nombre"
         value={form.name}
         onChange={(e) =>
-          setForm({ ...form, name: sanitizeInput(e.target.value) })
+          setForm({ ...form, name: e.target.value })
         }
         maxLength={50}
         required
@@ -104,7 +104,7 @@ export default function PostForm() {
         placeholder="Descripción"
         value={form.description}
         onChange={(e) =>
-          setForm({ ...form, description: sanitizeInput(e.target.value) })
+          setForm({ ...form, description: e.target.value })
         }
         maxLength={100}
         required

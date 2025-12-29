@@ -42,7 +42,7 @@ def add_post():
     description = data.get("description", "").strip()
 
     # Control de tamaño para evitar datos fuera de lo esperado
-    if len(name) > 10 or len(description) > 50:
+    if len(name) > 50 or len(description) > 100:
         return jsonify({"error": "Datos demasiado largos"}), 400
 
     try:
